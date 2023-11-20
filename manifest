@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=urn:lsid:genepattern.org:module.analysis:00443
 author=
-commandLine=python /build/tfsites-webportal/02-inSilicoSnvAnalysis.py  -f <input.data> -m <mutation.effects>  -i <IUPAC>  -o <out.filename>  -p <normpbm>        
+commandLine=python /build/tfsites-webportal/02-inSilicoSnvAnalysis/02-inSilicoSnvAnalysis.py  -f <input.data> -m <mutation.effects>  -i <IUPAC>  -o <out.filename>  -p <normpbm>        
 cpuType=any
 description=Annotates all predicted transcription factor sites in a DNA sequence and report their affinity.\n\nhttps\://github.com/jsolvason/tfsites-webportal/blob/master/1-annotateTfSites-example.sh\n\n
 documentationUrl=https://genepattern.github.io/tfsites.inSilicoSnvAnalysis/v1/
