@@ -8,7 +8,7 @@
 
 **Task Type:** Transciption factor analysis
 
-**LSID:**  urn:lsid:genepattern.org:module.analysis:00442
+**LSID:**  urn:lsid:genepattern.org:module.analysis:00443
 
 
 ## Introduction
