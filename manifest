@@ -3,13 +3,13 @@
 JVMLevel=
 LSID=urn:lsid:genepattern.org:module.analysis:00443
 author=
-commandLine=python /build/tfsites-webportal/02-inSilicoSnvAnalysis/02-inSilicoSnvAnalysis.py  -f <input.data> -m <mutation.effects>  -i <IUPAC>  -o <out.filename>  -p <normpbm>        
+commandLine=python /build/tfsites-webportal/13-annotateAndVisualizeInSilicoSnvs/13-annotateAndVisualizeInSilicoSnvs.py  -f <input.data> -m <mutation.effects>  -i <IUPAC> -p <normpbm> -o <opt.threshold> -s <subopt.threshold> -t <tf.names> -I <IUPACs> -c <colors> -b <mb.values>  -O <table.out.filename>  -v <visualization.out.filename>    
 cpuType=any
-description=Annotates all predicted transcription factor sites in a DNA sequence and report their affinity.\n\nhttps\://github.com/jsolvason/tfsites-webportal/blob/master/1-annotateTfSites-example.sh\n\n
-documentationUrl=https://genepattern.github.io/tfsites.inSilicoSnvAnalysis/v1/
+description=Creates a visualization showing all TF binding sites in a sequence.
+documentationUrl=https://genepattern.github.io/tfsites.InSilicoSnvAnalysis/v1/
 fileFormat=
 job.cpuCount=
-job.docker.image=genepattern/tfsites\:0.2
+job.docker.image=genepattern/tfsites\:0.8
 job.memory=
 job.walltime=
 language=any
@@ -28,58 +28,165 @@ p1_prefix=
 p1_prefix_when_specified=
 p1_type=java.io.File
 p1_value=
-p2_MODE=
-p2_TYPE=TEXT
-p2_default_value=NNGGAWNN
-p2_description=IUPAC DNA definition of the transcription factor site
-p2_fileFormat=
+
+p2_MODE=IN
+p2_TYPE=FILE
+p2_default_value=
+p2_description=Normalized PBM created with the tfsites.0.defineTfSites module.
+p2_fileFormat=.tsv
 p2_flag=
-p2_name=IUPAC
+p2_name=normpbm
 p2_numValues=0..1
 p2_optional=
 p2_prefix=
 p2_prefix_when_specified=
-p2_type=java.lang.String
+p2_type=java.io.File
 p2_value=
+
 p3_MODE=
 p3_TYPE=TEXT
-p3_default_value=<input.data_basename>_snv_effects.tsv
-p3_description=Out file name for the annotated PBM data
+p3_default_value=NNGGAWNN
+p3_description=IUPAC DNA definition of the transcription factor site
 p3_fileFormat=
 p3_flag=
-p3_name=out.filename
+p3_name=IUPAC
 p3_numValues=0..1
 p3_optional=
 p3_prefix=
 p3_prefix_when_specified=
 p3_type=java.lang.String
 p3_value=
-p4_MODE=IN
-p4_TYPE=FILE
-p4_default_value=
-p4_description=Normalized PBM created with the tfsites.0.defineTfSites module.
-p4_fileFormat=.tsv
-p4_flag=\ \ 
-p4_name=normpbm
-p4_numValues=0..1
+
+
+p4_MODE=
+p4_TYPE=TEXT
+p4_default_value=all
+p4_description=List of one or more mutation effects to be analyzed (list of comma-separated value) or \"all\"
+p4_fileFormat=
+p4_flag=
+p4_name=mutation.effects
+p4_numValues=1..1
 p4_optional=
 p4_prefix=
 p4_prefix_when_specified=
-p4_type=java.io.File
+p4_type=java.lang.String
 p4_value=
-p5_MODE=IN
+
+
+p5_MODE=
 p5_TYPE=TEXT
-p5_default_value=all
-p5_description=List of one or more mutation effects to be analyzed (list of comma-separated value) or "all"
+p5_default_value=1.5
+p5_description=opt.threshold DESCRIPTION NEEDED
 p5_fileFormat=
-p5_flag=\ \ 
-p5_name=mutation.effects
-p5_numValues=1..1
+p5_flag=
+p5_name=opt.threshold
+p5_numValues=0..1
 p5_optional=
 p5_prefix=
 p5_prefix_when_specified=
 p5_type=java.lang.String
 p5_value=
+
+p6_MODE=
+p6_TYPE=TEXT
+p6_default_value=0.9
+p6_description=subopt.threshold DESCRIPTION NEEDED
+p6_fileFormat=
+p6_flag=
+p6_name=subopt.threshold
+p6_numValues=0..1
+p6_optional=
+p6_prefix=
+p6_prefix_when_specified=
+p6_type=java.lang.String
+p6_value=
+
+
+p7_MODE=
+p7_TYPE=TEXT
+p7_default_value=ETS
+p7_description=tf.names DESCRIPTION NEEDED
+p7_fileFormat=.tsv
+p7_flag=
+p7_name=tf.names
+p7_numValues=0..1
+p7_optional=
+p7_prefix=
+p7_prefix_when_specified=
+p7_type=java.lang.String
+p7_value=
+
+
+p8_MODE=
+p8_TYPE=TEXT
+p8_default_value=ETS\=NNGGAWNN
+p8_description=IUOACs DESCRIPTION NEEDED
+p8_fileFormat=
+p8_flag=
+p8_name=IUPACs
+p8_numValues=1..1
+p8_optional=
+p8_prefix=
+p8_prefix_when_specified=
+p8_type=java.lang.String
+p8_value=
+
+p9_MODE=
+p9_TYPE=TEXT
+p9_default_value=ETS\=blue
+p9_description=colors DESCRIPTION NEEDED
+p9_fileFormat=
+p9_flag=
+p9_name=colors
+p9_numValues=1..1
+p9_optional=
+p9_prefix=
+p9_prefix_when_specified=
+p9_type=java.lang.String
+p9_value=
+
+p10_MODE=
+p10_TYPE=TEXT
+p10_default_value=ETS\=1+0.2
+p10_description=mb.values DESCRIPTION NEEDED
+p10_fileFormat=
+p10_flag=
+p10_name=mb.values
+p10_numValues=1..1
+p10_optional=
+p10_prefix=
+p10_prefix_when_specified=
+p10_type=java.lang.String
+p10_value=
+
+p11_MODE=
+p11_TYPE=TEXT
+p11_default_value=<input.data_basename>_snv_effects.tsv
+p11_description=Output filename of table data containing NEED DESCRIPTION
+p11_fileFormat=
+p11_flag=
+p11_name=table.out.filename
+p11_numValues=0..1
+p11_optional=
+p11_prefix=
+p11_prefix_when_specified=
+p11_type=java.lang.String
+p11_value=
+
+p12_MODE=
+p12_TYPE=TEXT
+p12_default_value=<input.data_basename>_snv_effects.png,<input.data_basename>_snv_effects_2.png
+p12_description=Out file name for the plots of NEED DESCRIPTION
+p12_fileFormat=
+p12_flag=
+p12_name=visualization.out.filename
+p12_numValues=0..1
+p12_optional=
+p12_prefix=
+p12_prefix_when_specified=
+p12_type=java.lang.String
+p12_value=
+
 
 privacy=public
 quality=development

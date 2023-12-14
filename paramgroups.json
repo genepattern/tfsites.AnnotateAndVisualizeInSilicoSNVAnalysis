@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Inputs and Outputs",
+        "description": "Required Parameters",
+        "hidden": false,
+        "parameters": [
+            "input.data",
+            "normpbm",
+            "table.out.filename",
+            "visualization.out.filename"
+        ]
+    },
+    {
+        "name": "Required Parameters",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "IUPAC",
+	    "mutation.effects",
+            "opt.threshold",
+            "subopt.threshold",
+            "tf.names",
+            "IUPACs",
+            "colors",
+            "mb.values"
+        ]
+    }
+]
