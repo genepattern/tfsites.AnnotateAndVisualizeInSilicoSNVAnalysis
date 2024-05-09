@@ -4,25 +4,39 @@
         "description": "Required Parameters",
         "hidden": false,
         "parameters": [
-            "input.data",
-            "normpbm",
-            "table.out.filename",
-            "visualization.out.filename"
+            "DNA.sequence(s).to.annotate",
+            "PBM.or.PFM.reference.data.for.SNV.analysis",
+            "PBM.reference.data.for.plotting",
+            "PFM.reference.data.for.plotting",
+            "SNV.effects.on.TF.sites.table.output.filename",
+            "SNV.effects.on.TF.sites.annotated.image.output.filename"
         ]
     },
     {
-        "name": "Required Parameters",
+        "name": "Analysis Parameters",
         "description": "",
         "hidden": false,
         "parameters": [
-            "IUPAC",
-	    "mutation.effects",
-            "opt.threshold",
-            "subopt.threshold",
-            "tf.names",
-            "IUPACs",
-            "colors",
-            "mb.values"
+            "binding.site.definition.for.SNV.analysis",
+	    "reference.data.type.for.SNV.analysis",
+            "SNV.effects.to.report",
+            "optimization.threshold",
+            "suboptimization.threshold"
+        ]
+    },
+     {
+        "name": "Plotting Parameters",
+        "description": "",
+        "hidden": false,
+        "parameters": [
+            "tf.name.for.plotting",
+	    "binding.site.definition.for.plotting",
+            "binding.site.color",
+            "plot.denovo.sites",
+            "plot.dimensions",
+            "plot.resolution",
+            "region.of.DNA.to.visualize",
+            "number.of.bases.included.per.plot"
         ]
     }
 ]

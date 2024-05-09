@@ -1,5 +1,5 @@
 
-# tfsites.InSilicoSnvAnalysis  Genepattern module docs pages root
+# tfsites.annotateAndVisualizeInSilicoSnvAnalysis  Genepattern module docs pages root
 
 [v1 initial revision](v1/index.md)
 
