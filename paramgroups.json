@@ -6,8 +6,8 @@
         "parameters": [
             "DNA.sequence(s).to.annotate",
             "PBM.or.PFM.reference.data.for.SNV.analysis",
-            "PBM.reference.data.for.plotting",
-            "PFM.reference.data.for.plotting",
+            "TF.information.for.plotting",
+            "all.TF.reference.data",
             "SNV.effects.on.TF.sites.table.output.filename",
             "SNV.effects.on.TF.sites.annotated.image.output.filename"
         ]
@@ -29,9 +29,6 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "tf.name.for.plotting",
-	    "binding.site.definition.for.plotting",
-            "binding.site.color",
             "plot.denovo.sites",
             "plot.dimensions",
             "plot.resolution",

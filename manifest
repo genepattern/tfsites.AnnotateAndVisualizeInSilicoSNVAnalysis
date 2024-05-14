@@ -1,9 +1,9 @@
-#tfsites.InSilicoSnvAnalysis
+#tfsites.AnnotateAndVisualizeInSilicoSnvAnalysis
 #Mon Aug 21 21:11:17 UTC 2023
 JVMLevel=
 LSID=urn:lsid:genepattern.org:module.analysis:00443
 author=
-commandLine=python 04-annotateAndVisualizeInSilicoSnvs/04-annotateAndVisualizeInSilicoSnvs.py  <DNA.sequence(s).to.annotate> <PBM.or.PFM.reference.data.for.SNV.analysis>  <PBM.reference.data.for.plotting>  <PFM.reference.data.for.plotting>  <SNV.effects.on.TF.sites.table.output.filename> <SNV.effects.on.TF.sites.annotated.image.output.filename>  <binding.site.definition.for.SNV.analysis> <reference.data.type.for.SNV.analysis> <tf.name.for.plotting>  <binding.site.definition.for.plotting>  <binding.site.color>  <SNV.effects.to.report> <plot.denovo.sites> <optimization.threshold> <suboptimization.threshold> <plot.dimensions> <plot.resolution> <region.of.DNA.to.visualize> <number.of.bases.included.per.plot>
+commandLine=python /build/tfsites-webportal/04-annotateAndVisualizeInSilicoSnvs/04-annotateAndVisualizeInSilicoSnvs.py  <DNA.sequence(s).to.annotate> <PBM.or.PFM.reference.data.for.SNV.analysis>  <TF.information.for.plotting>  <all.TF.reference.data>  <SNV.effects.on.TF.sites.table.output.filename> <SNV.effects.on.TF.sites.annotated.image.output.filename>  <binding.site.definition.for.SNV.analysis> <reference.data.type.for.SNV.analysis>  <SNV.effects.to.report> <plot.denovo.sites> <optimization.threshold> <suboptimization.threshold> <plot.dimensions> <plot.resolution> <region.of.DNA.to.visualize> <number.of.bases.included.per.plot>
 
 cpuType=any
 description=Creates a visualization showing all TF binding sites in a sequence.
@@ -26,70 +26,70 @@ p1_name=DNA.sequence(s).to.annotate
 p1_numValues=1..1
 p1_optional=
 p1_prefix=
-p1_prefix_when_specified=-d
+p1_prefix_when_specified=-d  
 p1_type=java.io.File
 p1_value=
 
 p2_MODE=IN
 p2_TYPE=FILE
 p2_default_value=
-p2_description=Normalized PBM data file for a transcription factor obtained from defineTfSites. This is the transcription factor for which in-silico SNV analysis will be performed.
+p2_description=Normalized PBM data file for a transcription factor obtained from defineTFBindingSites.from.PBM or normalized PFM data file for a transcription factor from defineTFBindingSites.from.PFM. This is the transcription factor for which in-silico SNV analysis will be performed.
 p2_fileFormat=.tsv
 p2_flag=
 p2_name=PBM.or.PFM.reference.data.for.SNV.analysis
 p2_numValues=0..1
 p2_optional=
 p2_prefix=
-p2_prefix_when_specified=-a
+p2_prefix_when_specified=-a  
 p2_type=java.io.File
 p2_value=
 
 p3_MODE=IN
 p3_TYPE=FILE
 p3_default_value=
-p3_description=Normalized PBM data file for a transcription factor obtained from defineTfSites. This will be used to label the affinity of the binding sites that are plotted.
+p3_description=File containing all the information for the transcription factors being analyzed, including its name, binding site definition, desired color on the plot, any relative PBM affinity data, and any PFM score data. 
 p3_fileFormat=.tsv
 p3_flag=
-p3_name=PBM.reference.data.for.plotting
-p3_numValues=0..1
+p3_name=TF.information.for.plotting
+p3_numValues=1..1
 p3_optional=
 p3_prefix=
-p3_prefix_when_specified=-b
+p3_prefix_when_specified=-T  
 p3_type=java.io.File
 p3_value=
 
 p4_MODE=IN
 p4_TYPE=FILE
 p4_default_value=
-p4_description=normalized PFM data file for a transcription factor obtained from defineTfSites. This will be used to label the score of the binding sites that are plotted.
+p4_description=File(s) referenced in the TF information file.
 p4_fileFormat=.tsv
 p4_flag=
-p4_name=PFM.reference.data.for.plotting
-p4_numValues=0..1
+p4_name=all.TF.reference.data
+p4_numValues=1..99
 p4_optional=
 p4_prefix=
-p4_prefix_when_specified=-w
+p4_prefix_when_specified=-R  
 p4_type=java.io.File
 p4_value=
 
 
 p5_MODE=
 p5_TYPE=TEXT
-p5_default_value=<input.data_basename>_snv_effects.tsv
-p5_description=Name of the output file containing the list of SNVs and their effects. Every possible mutation for each position in the sequence is labeled on the plot, and it is color-coded by the mutation type as indicated by the provided legend.
+p5_default_value=<DNA.sequence(s).to.annotate_basename>_snv_effects.tsv
+p5_description=Name of the output file containing the list of SNVs and their effects. Every possible mutation for each position in the sequence is labeled on the plot, and it is color-coded by the mutation type as indicated by the legend provided in the "TF information for plotting" file.
 p5_fileFormat=
 p5_flag=
 p5_name=SNV.effects.on.TF.sites.table.output.filename
 p5_numValues=0..1
 p5_optional=
 p5_prefix=
-p5_prefix_when_specified=-t
+p5_prefix_when_specified=-t  
 p5_type=java.lang.String
 p5_value=
 
 p6_MODE=
 p6_TYPE=TEXT
-p6_default_value=<input.data_basename>_snv_effects.png,<input.data_basename>_snv_effects_2.png
+p6_default_value=<DNA.sequence(s).to.annotate_basename>_snv_effects.png
 p6_description=Base name of the output file for the plots. If the length of the sequence is greater than 500, the visualization will be broken up into multiple output files with the following name format: [base name]_zoom=[start pos],[end pos].png
 p6_fileFormat=
 p6_flag=
@@ -97,7 +97,7 @@ p6_name=SNV.effects.on.TF.sites.annotated.image.output.filename
 p6_numValues=0..1
 p6_optional=
 p6_prefix=
-p6_prefix_when_specified=-i
+p6_prefix_when_specified=-i  
 p6_type=java.lang.String
 p6_value=
 
@@ -113,14 +113,14 @@ p7_name=binding.site.definition.for.SNV.analysis
 p7_numValues=0..1
 p7_optional=
 p7_prefix=
-p7_prefix_when_specified=-s
+p7_prefix_when_specified=-s  
 p7_type=java.lang.String
 p7_value=
 
 
 p8_MODE=
 p8_TYPE=TEXT
-p8_default_value=
+p8_default_value=PBM
 p8_description=Specify whether PBM or PFM reference is being used to annotate binding sites.
 p8_fileFormat=
 p8_flag=
@@ -128,170 +128,123 @@ p8_name=reference.data.type.for.SNV.analysis
 p8_numValues=1..1
 p8_optional=
 p8_prefix=
-p8_prefix_when_specified=-r
+p8_prefix_when_specified=-r  
 p8_type=java.lang.String
 p8_value=PBM=PBM;PFM=PFM
 
+
 p9_MODE=
 p9_TYPE=TEXT
-p9_default_value=ETS
-p9_description=Name of transcription factor to be plotted
+p9_default_value=all
+p9_description=Specify one or more mutation types to analyze. SNV mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are 'inc', 'dec', 'denovo', and 'del.' This option also takes the value 'all' if the user would like to analyze all of the listed mutation types.
 p9_fileFormat=
 p9_flag=
-p9_name=tf.name.for.plotting
-p9_numValues=0..1
-p9_optional=
+p9_name=SNV.effects.to.report
+p9_numValues=1..1
+p9_optional=on
 p9_prefix=
-p9_prefix_when_specified=
+p9_prefix_when_specified=-e 
 p9_type=java.lang.String
 p9_value=
 
 p10_MODE=
 p10_TYPE=TEXT
-p10_default_value=
-p10_description=IUPAC definition of the core binding site to be plotted
+p10_default_value=TRUE
+p10_description=f True, plot binding sites that would be created from denovo SNVs, in addition to existing binding sites. If False, only plot existing binding sites.
 p10_fileFormat=
 p10_flag=
-p10_name=binding.site.definition.for.plotting
+p10_name=plot.denovo.sites
 p10_numValues=1..1
 p10_optional=
 p10_prefix=
-p10_prefix_when_specified=
+p10_prefix_when_specified=-n  
 p10_type=java.lang.String
-p10_value=
+p10_value=TRUE=TRUE;FALSE=FALSE
+
 
 p11_MODE=
 p11_TYPE=TEXT
-p11_default_value=
-p11_description=Color of the binding sites on the plot, for a specific transcription factor
+p11_default_value=1.5
+p11_description=Fold-change threshold for affinity-increasing mutations. Only SNVs with fold change above this threshold will be reported. By default, all will be reported.
 p11_fileFormat=
 p11_flag=
-p11_name=binding.site.color
-p11_numValues=1..1
-p11_optional=on
+p11_name=optimization.threshold
+p11_numValues=0..1
+p11_optional=
 p11_prefix=
-p11_prefix_when_specified=
+p11_prefix_when_specified=-o  
 p11_type=java.lang.String
 p11_value=
 
 p12_MODE=
 p12_TYPE=TEXT
-p12_default_value=
-p12_description=Specify one or more mutation types to analyze. SNV mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are 'inc', 'dec', 'denovo', and 'del.' This option also takes the value 'all' if the user would like to analyze all of the listed mutation types.
+p12_default_value=0.9
+p12_description=Fold-change threshold for affinity-decreasing mutations. Only SNVs with fold change below this threshold will be reported. By default, all will be reported.
 p12_fileFormat=
 p12_flag=
-p12_name=SNV.effects.to.report
-p12_numValues=1..1
-p12_optional=on
+p12_name=suboptimization.threshold
+p12_numValues=0..1
+p12_optional=
 p12_prefix=
-p12_prefix_when_specified=-e
+p12_prefix_when_specified=-z  
 p12_type=java.lang.String
 p12_value=
 
 p13_MODE=
 p13_TYPE=TEXT
 p13_default_value=
-p13_description=f True, plot binding sites that would be created from denovo SNVs, in addition to existing binding sites. If False, only plot existing binding sites.
+p13_description=Height and width of the image in inches.
 p13_fileFormat=
 p13_flag=
-p13_name=plot.denovo.sites
-p13_numValues=1..1
-p13_optional=
+p13_name=plot.dimensions
+p13_numValues=0..1
+p13_optional=on
 p13_prefix=
-p13_prefix_when_specified=-n
+p13_prefix_when_specified=-m  
 p13_type=java.lang.String
-p13_value=TRUE=TRUE;FALSE=FALSE
-
+p13_value=
 
 p14_MODE=
 p14_TYPE=TEXT
-p14_default_value=1
-p14_description=Fold-change threshold for affinity-increasing mutations. Only SNVs with fold change above this threshold will be reported. By default, all will be reported.
+p14_default_value=200
+p14_description=Resolution of the plot, in dots (pixels) per inch.
 p14_fileFormat=
 p14_flag=
-p14_name=optimization.threshold
+p14_name=plot.resolution
 p14_numValues=0..1
 p14_optional=
 p14_prefix=
-p14_prefix_when_specified=-o
+p14_prefix_when_specified=-l  
 p14_type=java.lang.String
 p14_value=
 
 p15_MODE=
 p15_TYPE=TEXT
-p15_default_value=1
-p15_description=Fold-change threshold for affinity-decreasing mutations. Only SNVs with fold change below this threshold will be reported. By default, all will be reported.
+p15_default_value=
+p15_description=Given a start position and an end position, zoom into a portion of the sequence. The numbers in the range are inclusive. For example, the first 200 nucleotides of the sequence would be specified as: 1-200.
 p15_fileFormat=
 p15_flag=
-p15_name=suboptimization.threshold
+p15_name=region.of.DNA.to.visualize
 p15_numValues=0..1
-p15_optional=
+p15_optional=on
 p15_prefix=
-p15_prefix_when_specified=-z
+p15_prefix_when_specified=-v  
 p15_type=java.lang.String
 p15_value=
 
 p16_MODE=
 p16_TYPE=TEXT
-p16_default_value=1
-p16_description=Height and width of the image in inches.
+p16_default_value=500
+p16_description=Interval size (in nucleotides) to separate the output plot into. By default, the sequence will be divided into 500-nucleotide segments.
 p16_fileFormat=
 p16_flag=
-p16_name=plot.dimensions
+p16_name=number.of.bases.included.per.plot
 p16_numValues=0..1
 p16_optional=on
 p16_prefix=
-p16_prefix_when_specified=-m
+p16_prefix_when_specified=-f  
 p16_type=java.lang.String
 p16_value=
-
-p17_MODE=
-p17_TYPE=TEXT
-p17_default_value=200
-p17_description=Resolution of the plot, in dots (pixels) per inch.
-p17_fileFormat=
-p17_flag=
-p17_name=plot.resolution
-p17_numValues=0..1
-p17_optional=
-p17_prefix=
-p17_prefix_when_specified=-l
-p17_type=java.lang.String
-p17_value=
-
-p18_MODE=
-p18_TYPE=TEXT
-p18_default_value=
-p18_description=Given a start position and an end position, zoom into a portion of the sequence. The numbers in the range are inclusive. For example, the first 200 nucleotides of the sequence would be specified as: 1-200.
-p18_fileFormat=
-p18_flag=
-p18_name=region.of.DNA.to.visualize
-p18_numValues=0..1
-p18_optional=
-p18_prefix=
-p18_prefix_when_specified=-v
-p18_type=java.lang.String
-p18_value=
-
-p19_MODE=
-p19_TYPE=TEXT
-p19_default_value=500
-p19_description=Interval size (in nucleotides) to separate the output plot into. By default, the sequence will be divided into 500-nucleotide segments.
-p19_fileFormat=
-p19_flag=
-p19_name=number.of.bases.included.per.plot
-p19_numValues=0..1
-p19_optional=
-p19_prefix=
-p19_prefix_when_specified=-f
-p19_type=java.lang.String
-p19_value=
-
-
-
-
-
-
 
 privacy=public
 quality=development
