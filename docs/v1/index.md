@@ -104,7 +104,7 @@ If the sequence is greater than 500 nucleotides in length, the annotation images
 ```
 Sequence Name	    Sequence
 ZRS                 AACTTTAATGCCTATGTTTGATTTGAAGTCATAGCATAAAAGGTAACATAAGCAACATCCTGACCAATTATCCAAACCATCCAGACATCCCTGAATGGC...
-Hand2_mm1689        CACCACTGGGTGATCCATAGTATGGAATATTTTTATGAGAAACAGCCACATAACATGTACCTGTTAATGTAGGCTTTGTGTTTATTTGCAATAGCAGAG...
+Hand2               CACCACTGGGTGATCCATAGTATGGAATATTTTTATGAGAAACAGCCACATAACATGTACCTGTTAATGTAGGCTTTGTGTTTATTTGCAATAGCAGAG...
 ```
 
 2. PBM or PFM reference data for SNV analysis (.tsv)
@@ -172,10 +172,14 @@ AAAAAACA     0.56
 2.  Annotated Sequence Image(s) (.png)
 
 - ZRS sequence: 
-   <img src="./05-output_zrs_snv_effects-start_pos=0.png"/>
+   <img src="./visualizeInSilicoSnvs-image_seq=ZRS_start-pos=0.png"/>
+   
+   <img src="./visualizeInSilicoSnvs-image_seq=ZRS_start-pos=250.png"/>
 
-- Hand2_mm1689 sequence:
-   <img src="./05-output_hand2_snv_effects-start_pos=0.png"/>
+- Hand2 sequence:
+   <img src="./visualizeInSilicoSnvs-image_seq=Hand2_start-pos=0.png"/>
+   
+   <img src="./visualizeInSilicoSnvs-image_seq=Hand2_start-pos=250.png"/>
 
   
 ## Example Data
