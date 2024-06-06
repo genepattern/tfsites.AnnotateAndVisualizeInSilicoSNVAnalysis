@@ -134,7 +134,7 @@ HOX         NYNNTNAA                    gold      03-input_hox-norm-pbm.tsv
 HAND        CANNTG                      pink	       
 ```
     
-4. All TF Reference Data (.tsv)
+4. all TF reference data (.tsv)
 - Columns
   - `PBM Kmer:` the sequence of every possible k-mer
   - `PBM Relative Affinity:` the relative affinity of each k-mer normalized to the k-mer with the highest MFI
@@ -150,7 +150,7 @@ AAAAAACA     0.56
 
 
 ## Output Files
-1.  SNV Effects Output Table (.tsv)
+1.  SNV effects output table (.tsv)
 - Note: if PFM reference data is provided instead of PBM reference data, then the columns `Reference Affinity` and `Alternate Affinity` will instead be labeled `Reference Score` and `Alternate Score` 
 - Columns:
     - `Sequence Name:` name of the sequence being analyzed
@@ -168,7 +168,7 @@ AAAAAACA     0.56
     - `SNV Effect:` the type of SNV effect
 
 
-2.  Annotated Sequence Image(s) (.png)
+2.  annotated sequence image(s) (.png)
 
 - ZRS sequence: 
    <img src="./visualizeInSilicoSnvs-image_seq=ZRS_start-pos=0.png"/>
