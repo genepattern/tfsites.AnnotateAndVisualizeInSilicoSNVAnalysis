@@ -129,8 +129,8 @@ AAAAAACA     0.12
   
 ```
 TF Name     Binding Site Definition     Color     PBM Reference Data           PFM Reference Data
-ETS         NNGGAWNN                    blue      03-input_ets-norm-pbm.tsv	
-HOX         NYNNTNAA                    gold      03-input_hox-norm-pbm.tsv	
+ETS         NNGGAWNN                    blue      input_ets-pbm.tsv	
+HOX         NYNNTNAA                    gold      input_hox-pbm.tsv	
 HAND        CANNTG                      pink	       
 ```
     
