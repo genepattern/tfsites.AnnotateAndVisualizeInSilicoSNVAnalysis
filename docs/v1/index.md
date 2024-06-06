@@ -1,4 +1,4 @@
-# tfsites.AnnotateAndVisualizeInSilicoSnvAnalysis v1
+# tfsites.AnnotateAndVisualizeInSilicoSnvs v1
 
 **Author(s):** Joe Solvason  
 
