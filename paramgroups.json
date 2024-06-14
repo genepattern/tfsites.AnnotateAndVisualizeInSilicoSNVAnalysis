@@ -8,18 +8,16 @@
             "PBM.or.PFM.reference.data.for.SNV.analysis",
             "TF.information.for.plotting",
             "all.TF.reference.data",
-            "SNV.effects.on.TF.sites.table.output.filename",
-            "SNV.effects.on.TF.sites.annotated.image.output.filename"
         ]
     },
     {
-        "name": "Analysis Parameters",
+        "name": "Other Parameters",
         "description": "",
         "hidden": false,
         "parameters": [
-            "binding.site.definition.for.SNV.analysis",
-	    "reference.data.type.for.SNV.analysis",
+            "TF.name.for.SNV.analysis",
             "SNV.effects.to.report",
+            "plot.denovo.sites",
             "optimization.threshold",
             "suboptimization.threshold"
         ]
@@ -29,11 +27,11 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "plot.denovo.sites",
+            "output.image.format",
+            "zoom.range",
+            "window.size",
             "plot.dimensions",
             "plot.resolution",
-            "region.of.DNA.to.visualize",
-            "number.of.bases.included.per.plot"
         ]
     }
 ]
