@@ -6,7 +6,7 @@ author=Joe Salvasson, modified into a GenePattern module as Ted Liefeld
 commandLine=python /build/tfsites-webportal/04-annotateAndVisualizeInSilicoSnvs/04-annotateAndVisualizeInSilicoSnvs.py  <DNA.sequence(s).to.annotate> <PBM.or.PFM.reference.data.for.SNV.analysis>  <TF.information.for.plotting>  <all.TF.reference.data>    <SNV.effects.to.report> <plot.denovo.sites> <optimization.threshold> <suboptimization.threshold> <output.image.format> <zoom.range> <window.size> <plot.dimensions> <plot.resolution>   <TF.name.for.SNV.analysis>
 
 cpuType=any
-description=Creates a visualization showing all TF binding sites in a sequence.
+description=Reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing (or sub-optimizing) the affinity/score of a binding site, deleting a binding site, or creating a binding site.
 documentationUrl=https://genepattern.github.io/tfsites.InSilicoSnvAnalysis/v1/
 fileFormat=
 job.cpuCount=
