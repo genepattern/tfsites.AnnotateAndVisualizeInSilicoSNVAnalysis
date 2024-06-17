@@ -3,14 +3,14 @@
 JVMLevel=
 LSID=urn:lsid:genepattern.org:module.analysis:00443
 author=Joe Salvasson, modified into a GenePattern module as Ted Liefeld
-commandLine=python /build/tfsites-webportal/04-annotateAndVisualizeInSilicoSnvs/04-annotateAndVisualizeInSilicoSnvs.py  <DNA.sequence(s).to.annotate> <PBM.or.PFM.reference.data.for.SNV.analysis>  <TF.information.for.plotting>  <all.TF.reference.data>   <TF.name.for.SNV.analysis>  <SNV.effects.to.report> <plot.denovo.sites> <optimization.threshold> <suboptimization.threshold> <output.image.format> <zoom.range> <window.size> <plot.dimensions> <plot.resolution>
+commandLine=python /build/tfsites-webportal/04-annotateAndVisualizeInSilicoSnvs/04-annotateAndVisualizeInSilicoSnvs.py  <DNA.sequence(s).to.annotate> <PBM.or.PFM.reference.data.for.SNV.analysis>  <TF.information.for.plotting>  <all.TF.reference.data>    <SNV.effects.to.report> <plot.denovo.sites> <optimization.threshold> <suboptimization.threshold> <output.image.format> <zoom.range> <window.size> <plot.dimensions> <plot.resolution>   <TF.name.for.SNV.analysis>
 
 cpuType=any
 description=Creates a visualization showing all TF binding sites in a sequence.
 documentationUrl=https://genepattern.github.io/tfsites.InSilicoSnvAnalysis/v1/
 fileFormat=
 job.cpuCount=
-job.docker.image=genepattern/tfsites\:0.9
+job.docker.image=genepattern/tfsites\:0.10
 job.memory=
 job.walltime=
 language=any
@@ -97,7 +97,7 @@ p6_name=output.image.format
 p6_numValues=1..1
 p6_optional=
 p6_prefix=
-p6_prefix_when_specified=-r  
+p6_prefix_when_specified=-O  
 p6_type=java.lang.String
 p6_value=Window;Zoom
 
@@ -154,7 +154,7 @@ p10_name=suboptimization.threshold
 p10_numValues=0..1
 p10_optional=
 p10_prefix=
-p10_prefix_when_specified=-z  
+p10_prefix_when_specified=-b  
 p10_type=java.lang.String
 p10_value=
 
@@ -196,23 +196,39 @@ p13_name=zoom.range
 p13_numValues=0..1
 p13_optional=on
 p13_prefix=
-p13_prefix_when_specified=-v  
+p13_prefix_when_specified=-z  
 p13_type=java.lang.String
 p13_value=
 
+p5_MODE=
+p5_TYPE=TEXT
+p5_default_value=500
+p5_description=Interval size (in nucleotides) to separate the output plot into. By default, the sequence will be divided into 500-nucleotide segments.
+p5_fileFormat=
+p5_flag=
+p5_name=window.size
+p5_numValues=0..1
+p5_optional=on
+p5_prefix=
+p5_prefix_when_specified=-w  
+p5_type=java.lang.String
+p5_value=
+
 p14_MODE=
 p14_TYPE=TEXT
-p14_default_value=500
-p14_description=Interval size (in nucleotides) to separate the output plot into. By default, the sequence will be divided into 500-nucleotide segments.
+p14_default_value=
+p14_description=Name of the transcription factor to use for SNV analysis.
 p14_fileFormat=
 p14_flag=
-p14_name=window.size
+p14_name=TF.name.for.SNV.analysis
 p14_numValues=0..1
-p14_optional=on
+p14_optional=
 p14_prefix=
-p14_prefix_when_specified=-f  
+p14_prefix_when_specified=-s 
 p14_type=java.lang.String
 p14_value=
+
+
 
 privacy=public
 quality=development
