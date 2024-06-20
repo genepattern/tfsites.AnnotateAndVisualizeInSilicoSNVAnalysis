@@ -232,7 +232,7 @@ p14_value=
 
 privacy=public
 quality=development
-src.repo=
+src.repo=https://github.com/genepattern/tfsites.AnnotateAndVisualizeInSilicoSNVAnalysis
 taskDoc=
 taskType=Transcription factor analysis
 userid=ted
