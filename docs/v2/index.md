@@ -212,7 +212,7 @@ T  [  3441    637  28466   2145   1434   1014  28112   2849   2451 ]
   
 ## Example Data
 
-[Example input data is available on github](https://github.com/genepattern/tfsites.inSilicoSnvAnalysis/data)
+[Example input data is available on github](https://github.com/genepattern/tfsites.AnnotateAndVisualizeInSilicoSNVAnalysis/data)
     
     
 ## Version Comments
