@@ -46,27 +46,6 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 
 <span style="color: red;">*</span> indicates required parameter
 
-annotateAndVisualizeInSilicoSnvs_file_input(dna_sequences_to_annotate,
-                                                tf_name_for_snv_analysis,
-                                                tf_info=None,
-                                                batch_custom_pfm=None,
-                                                batch_pfm_min_score=0.7,
-                                                batch_pfm_tf_color='grey',
-                                                pfm_pseudocounts=False,
-                                                snv_effects_to_report='all',
-                                                plot_denovo_sites=False,
-                                                optimization_threshold=1,
-                                                suboptimization_threshold=1,
-                                                only_table=False, 
-                                                plot_dimensions=None,
-                                                plot_resolution=200,
-                                                out_image_format=None,
-                                                zoom_range=None,
-                                                window_size=None, 
-                                                out_directory="./", 
-                                                output_svg=False)
-
-
 ### Inputs and Outputs
 - <span style="color: red;">*</span>**DNA sequence(s) to annotate (.tsv)**
     - File containing one or more DNA sequences to be annotated. 
