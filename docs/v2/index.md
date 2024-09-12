@@ -204,14 +204,10 @@ T  [  3441    637  28466   2145   1434   1014  28112   2849   2451 ]
 2.  annotated sequence image(s) (.png)
 
 - ZRS sequence: 
-   <img src="./visualizeInSilicoSnvs-image_seq=ZRS_start-pos=0.png"/>
-   
-   <img src="./visualizeInSilicoSnvs-image_seq=ZRS_start-pos=250.png"/>
+   <img src="./visualizeInSilicoSnvs-image_seq=ZRS_tf=ETS_zoom=320-490.png"/>
 
 - Hand2 sequence:
-   <img src="./visualizeInSilicoSnvs-image_seq=Hand2_start-pos=0.png"/>
-   
-   <img src="./visualizeInSilicoSnvs-image_seq=Hand2_start-pos=250.png"/>
+   <img src="./visualizeInSilicoSnvs-image_seq=Hand2_tf=ETS_zoom=320-490.png"/>
 
   
 ## Example Data
