@@ -53,7 +53,7 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
     - File containing all the information for the transcription factors being plotted. This can include the transcription factor that is being used for SNV analysis.
 - **all TF reference data (.tsv)**
     - File(s) referenced in the TF information file.
-- **batch PFM custom (.txt)**
+- **batch PFM custom data (.txt)**
     - File containing all PFM matrices to predict binding sites. This can include the transcription factor that is being used for SNV analysis. ????????
  
 ### PFM Parameters
