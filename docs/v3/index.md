@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`AnnotateAndVisualizeInSilicoSnvs` reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence, for one transcription factor. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing (or sub-optimizing) the affinity/score of a binding site, deleting a binding site, or creating a binding site. 
+`AnnotateAndVisualizeInSilicoSnvs` reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence, for one transcription factor. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing the affinity/score of a binding site, deleting a binding site, or creating a binding site. 
 
 
 ## Methodology
@@ -138,17 +138,18 @@ ZRS              HAND        HAND:1       CAGATG              416               
 ```
 
 
-2.  annotated sequence image(s) (.png)
+2.  SNV effects image(s) (.png)
 
-<img src="../04-annotateAndVisualizeInSilicoSnvs/visualizeInSilicoSnvs-image_seq=ZRS_tf=ETS_zoom=320-490.png"/>
+<img src="./04-output_visualizeInSilicoSnvs-image_seq=ZRS_tf=ETS_zoom=320-490.png"/>
 
   
 ## Example Data
 
-Example input data is available at []()    
+Example input data is available [here](https://github.com/genepattern/tfsites.AnnotateAndVisualizeInSilicoSNVAnalysis/tree/develop/data).    
     
 ## Version Comments
 
+- **1.0.4** (2024-11-21): Updated for tfsites website.
 - **1.0.3** (2024-10-17): Third draft completed.
 - **1.0.2** (2024-09-12): Second draft completed. Updated parameters and visualizations.
 - **1.0.1** (2024-02-02): Draft completed.
