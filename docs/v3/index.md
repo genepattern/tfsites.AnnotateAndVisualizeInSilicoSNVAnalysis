@@ -1,4 +1,4 @@
-# tfsites.AnnotateAndVisualizeInSilicoSnvs v1
+# tfsites.FindTfSitesAlteredBySequenceVariation v1
 
 **Author(s):** Joe Solvason  
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`AnnotateAndVisualizeInSilicoSnvs` reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence, for one transcription factor. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing the affinity/score of a binding site, deleting a binding site, or creating a binding site. 
+`FindTfSitesAlteredBySequenceVariation` reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence, for one transcription factor. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing the affinity/score of a binding site, deleting a binding site, or creating a binding site. 
 
 
 ## Methodology
