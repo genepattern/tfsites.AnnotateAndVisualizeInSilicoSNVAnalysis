@@ -27,10 +27,10 @@ For every nucleotide in the sequence, all possible SNVs are made. For each SNV, 
     - The affinity/score fold change from the reference binding site to the alternate binding site is less than 1
 - `denovo`
     - A binding site is created
-    - The reference k-mer is not a predicted binding site (it either didn't follow the binding site definition or didn't meet the minimum score threshold), but the alternate k-mer is a predicted binding site
+    - The reference k-mer is not a predicted binding site (it either didn't follow the binding site definition or didn't meet the PWM minimum score threshold), but the alternate k-mer is a predicted binding site
 - `del`
     - A binding site is deleted
-    - The reference k-mer is a predicted binding site (it either followed the binding site definition or met the minimum score threshold), but the alternate k-mer is not a predicted binding site
+    - The reference k-mer is a predicted binding site (it either followed the binding site definition or met the PWM minimum score threshold), but the alternate k-mer is not a predicted binding site
   
 If an affinity optimization threshold is provided by the user, then we report only the binding sites that have an increased affinity/score with a fold change greater than or equal to the threshold. Similarly, if an affinity reduction threshold is provided, then we report only the binding sites that have a decreased affinity/score with a fold change less than or equal to the threshold. 
 
@@ -51,16 +51,16 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
     - Name of the transcription factor to use for SNV analysis.
 - <span style="color: red;">*</span>**TF color (string)**
     - Color assigned to binding sites on output visualization.
-- <span style="color: red;">*</span>**core binding site definition (string)**
+- **core binding site definition (string)**
     - `Default = None`
     - IUPAC definition of core TF binding site (see [here](https://www.bioinformatics.org/sms/iupac.html)). Only optional if using PWM data but required if using affinity data.
-- <span style="color: red;">*</span>**affinity reference data (.tsv)**
+- **affinity reference data (.tsv)**
     - `Default = None`
     - PBM affinity dataset used to assign a value to each binding site.
-- <span style="color: red;">*</span>**PWM data (.txt)**
+- **PWM data (.txt)**
     - `Default = None`
     - PWM dataset used to assign a value to each binding site.
-- <span style="color: red;">*</span>**PWM minimum score (float)**
+- **PWM minimum score (float)**
     - `Default = 0.7`
     - PWM score required to predict a binding site.
 
