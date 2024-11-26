@@ -63,6 +63,8 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 - **PWM minimum score (float)**
     - `Default = 0.7`
     - PWM score required to predict a binding site.
+- <span style="color: red;">*</span>**output name (string)**
+    - Base name of the output files.
 
 ### Other Parameters
 - **output image as svg (boolean)**
@@ -83,8 +85,6 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 - **zoom range (dash-separated string)**
     - `Default = None`
     - Given a start position and an end position, zoom into a portion of the sequence. The numbers in the range are inclusive and 1-indexed. For example, the first 200 nucleotides of the sequence would be specified as: 1-200.
-- <span style="color: red;">*</span>**output name (string)**
-    - Base name of the output files.
 
 ## Input Files
 
