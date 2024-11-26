@@ -5,33 +5,26 @@
         "hidden": false,
         "parameters": [
             "DNA.sequence(s).to.annotate",
-            "PBM.or.PFM.reference.data.for.SNV.analysis",
-            "TF.information.for.plotting",
-            "all.TF.reference.data",
+            "TF.name",
+            "TF.color",
+            "core.binding.site.definition",
+ 	    "affinity.reference.data",
+	    "PWM.data",
+ 	    "PWM.minimum.score",
+            "output.filename"
         ]
     },
     {
-        "name": "Other Parameters",
+        "name": "SNV Effect Parameters",
         "description": "",
         "hidden": false,
         "parameters": [
-            "TF.name.for.SNV.analysis",
-            "SNV.effects.to.report",
-            "plot.denovo.sites",
-            "optimization.threshold",
-            "suboptimization.threshold"
-        ]
-    },
-     {
-        "name": "Plotting Parameters",
-        "description": "",
-        "hidden": false,
-        "parameters": [
-            "output.image.format",
-            "zoom.range",
-            "window.size",
-            "plot.dimensions",
+            "output.image.as.svg",
+            "SNV.effect.type.to.report",
+            "affinity.optimization.threshold",
+            "affinity.reduction.threshold",
             "plot.resolution",
+	    "zoom.range"
         ]
     }
 ]
