@@ -1,8 +1,8 @@
-# tfsites.FindTfSitesAlteredBySequenceVariation v1
+# tfsites.FindTfSitesAlteredBySequenceVariation v3
 
 **Author(s):** Joe Solvason  
 
-**Contact:** Joe Solvason (solvason@eng.ucsd.edu)
+**Contact:** Joe Solvason (solvason@ucsd.edu)
 
 **Adapted as a GenePattern Module by:** Ted Liefeld (jliefeld@cloud.ucsd.edu)
 
@@ -63,8 +63,10 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 - **PWM minimum score (float)**
     - `Default = 0.7`
     - PWM score required to predict a binding site.
+- <span style="color: red;">*</span>**output filename (string)**
+    - Base name of the output files.
 
-### SNV Effect Parameters
+### Other Parameters
 - **output image as svg (boolean)**
     - `Default = False`
     - Option to output images as `.svg` in addition to `.png`. For manuscript preparation, `.svg` format is preferable.
@@ -83,7 +85,6 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 - **zoom range (dash-separated string)**
     - `Default = None`
     - Given a start position and an end position, zoom into a portion of the sequence. The numbers in the range are inclusive and 1-indexed. For example, the first 200 nucleotides of the sequence would be specified as: 1-200.
-
 
 ## Input Files
 
