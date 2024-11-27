@@ -1,4 +1,4 @@
-# tfsites.FindTfSitesAlteredBySequenceVariation v1
+# tfsites.FindTfSitesAlteredBySequenceVariation v3
 
 **Author(s):** Joe Solvason  
 
