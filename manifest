@@ -3,11 +3,11 @@
 JVMLevel=
 LSID=urn:lsid:genepattern.org:module.analysis:00443
 author=Joe Salvasson, modified into a GenePattern module as Ted Liefeld
-commandLine=python /build/tfsites-webportal/04-findTfSitesAlteredBySequenceVariation/04-findTfSitesAlteredBySequenceVariation.py  <DNA.sequence(s).to.annotate> <affinity.reference.data>  <PWM.data>  <PWM.minimum.score>    <SNV.effect.type.to.report> <affinity.optimization.threshold> <affinity.reduction.threshold> <output.image.as.svg> <zoom.range> <plot.resolution>   <TF.name> <TF.color> <core.binding.site.definition>  <output.filename>
+commandLine=python /build/tfsites-webportal/04-findTfSitesAlteredBySequenceVariation/04-findTfSitesAlteredBySequenceVariation.py  -d <DNA.sequences.to.annotate> -r <affinity.reference.data>  <PWM.data>  <PWM.minimum.score>    <SNV.effect.type.to.report> <affinity.optimization.threshold> <affinity.reduction.threshold> <output.image.as.svg> <zoom.range> <plot.resolution> -n <TF.name> -c <TF.color> -D <core.binding.site.definition>  <output.filename>
 
 cpuType=any
 description=FindTfSitesAlteredBySequenceVariation reports the effects of all possible in silico single-nucleotide variants (SNVs) in a given sequence, for one transcription factor. Possible SNV effects include increasing (or optimizing) the affinity/score of a binding site, decreasing the affinity/score of a binding site, deleting a binding site, or creating a binding site.
-documentationUrl=https://genepattern.github.io/tfsites.InSilicoSnvAnalysis/v1/
+documentationUrl=https://genepattern.github.io/tfsites.FindTfSitesAlteredBySequenceVariation/v2/
 fileFormat=
 job.cpuCount=
 job.docker.image=genepattern/tfsites\:0.12
@@ -22,11 +22,11 @@ p1_default_value=
 p1_description=File containing one or more DNA sequences to be annotated.
 p1_fileFormat=.tsv;.txt
 p1_flag=
-p1_name=DNA.sequence(s).to.annotate
+p1_name=DNA.sequences.to.annotate
 p1_numValues=1..1
 p1_optional=
 p1_prefix=
-p1_prefix_when_specified=-d  
+p1_prefix_when_specified= 
 p1_type=java.io.File
 p1_value=
 
@@ -37,10 +37,10 @@ p2_description=Name of the transcription factor to use for SNV analysis.
 p2_fileFormat=
 p2_flag=
 p2_name=TF.name
-p2_numValues=0..1
+p2_numValues=1..1
 p2_optional=
 p2_prefix=
-p2_prefix_when_specified=-n  
+p2_prefix_when_specified=
 p2_type=java.lang.String
 p2_value=
 
@@ -54,7 +54,7 @@ p3_name=TF.color
 p3_numValues=0..1
 p3_optional=
 p3_prefix=
-p3_prefix_when_specified=-c  
+p3_prefix_when_specified=
 p3_type=java.lang.String
 p3_value=
 
@@ -68,7 +68,7 @@ p4_name=core.binding.site.definition
 p4_numValues=0..1
 p4_optional=
 p4_prefix=
-p4_prefix_when_specified=-D   
+p4_prefix_when_specified=
 p4_type=java.lang.String
 p4_value=
 
@@ -83,7 +83,7 @@ p5_name=affinity.reference.data
 p5_numValues=0..1
 p5_optional=
 p5_prefix=
-p5_prefix_when_specified=-r  
+p5_prefix_when_specified=
 p5_type=java.io.File
 p5_value=
 
@@ -201,7 +201,7 @@ p13_value=
 
 p14_MODE=
 p14_TYPE=TEXT
-p14_default_value=<TF.NAME>_<core.binding.site.definition>_<affinity.reference.data_basename>
+p14_default_value=<TF.name>_<core.binding.site.definition>_<affinity.reference.data_basename>
 p14_description=Output filename prefix.
 p14_fileFormat=
 p14_flag=
@@ -209,7 +209,7 @@ p14_name=output.filename
 p14_numValues=1..1
 p14_optional=
 p14_prefix=
-p14_prefix_when_specified=-O `
+p14_prefix_when_specified=-O   
 p14_type=java.lang.String
 p14_value=
 
