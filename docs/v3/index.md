@@ -63,7 +63,7 @@ If the user wishes to analyze only a portion of the sequence, then a zoom range 
 - **PWM minimum score (float)**
     - `Default = 0.7`
     - PWM score required to predict a binding site.
-- <span style="color: red;">*</span>**output name (string)**
+- <span style="color: red;">*</span>**output filename (string)**
     - Base name of the output files.
 
 ### Other Parameters
