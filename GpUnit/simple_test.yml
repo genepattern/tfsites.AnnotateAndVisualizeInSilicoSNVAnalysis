@@ -10,7 +10,7 @@
 name: "tfsites.FindTfSitesAlteredBySequenceVariation - Basic test"
 module: tfsites.FindTfSitesAlteredBySequenceVariation
 params:
-    "DNA.sequence(s).to.annotate": "data/04-input_zrs-enhancer.tsv"
+    "DNA.sequences.to.annotate": "data/04-input_zrs-enhancer.tsv"
     affinity.reference.data: "data/04-input_ets1-pbm.tsv" 
     TF.name: "ETS"
     core.binding.site.definition:  "NNGGAWNN"
